@@ -14,8 +14,8 @@ class App extends Component {
       { name: "Lonavala", country: "India" },
       { name: "Brandenburg Gate", country: "Germany" },
       { name: "Reichstag Building", country: "Germany" },
-      { name: "Museum Island", country: "Germany" },
-      { name: "Munnar", country: "India" },
+      { name: "Museum Island", country: "Germany" }
+      /* { name: "Munnar", country: "India" },
       { name: "Leh Ladakh", country: "India" },
       { name: "Goa", country: "India" },
       { name: "Agra", country: "India" },
@@ -33,7 +33,7 @@ class App extends Component {
       { name: "Amritsar", country: "India" },
       { name: "Mussoorie", country: "India" },
       { name: "Mount Abu", country: "India" },
-      { name: "Tirupati", country: "India" }
+      { name: "Tirupati", country: "India" }*/
     ];
     this.filterCityList = this.cityList.filter((item) => {
       return item.country === "India";
@@ -45,9 +45,9 @@ class App extends Component {
       <div id="main">
         <ol>
           {this.filterCityList &&
-            this.filterCityList.map((item, index) => {
-              <li key={`location${index + 1}`}>{item.name}</li>;
-            })}
+            this.filterCityList.map((item, index) => (
+              <li key={`location${index + 1}`}>{item.name}</li>
+            ))}
         </ol>
       </div>
     );
